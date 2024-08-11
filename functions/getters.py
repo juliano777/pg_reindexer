@@ -62,4 +62,5 @@ def index_info(conn, schema_name: str, index_name: str) -> dict:
 
     return d
 
-
+def get_version_newer_than_11(version: str) -> bool:
+    return LooseVersion(version) > LooseVersion('11')
